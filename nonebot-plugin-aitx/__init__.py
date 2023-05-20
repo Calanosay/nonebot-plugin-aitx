@@ -9,6 +9,7 @@ from nonebot import on_message
 from nonebot.adapters.onebot.v11 import Bot, Event
 from nonebot.adapters.onebot.v11.message import Message
 from nonebot.rule import to_me
+import nonebot
 
 import random
 ai_tx = on_message(priority=100,rule=to_me())
