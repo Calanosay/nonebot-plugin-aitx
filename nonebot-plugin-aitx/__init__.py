@@ -12,9 +12,11 @@ from nonebot.rule import to_me
 
 import random
 ai_tx = on_message(priority=100,rule=to_me())
+config = nonebot.get_driver().config
+
 async def get_reply(s):
     try:
-        cred = credential.Credential("", "")##请在这里填写你的腾讯云api,填两个
+        cred = credential.Credential(str(config.TENCENT_SECRET_ID),str(config.TENCENT_SECRET_KEY))
         httpProfile = HttpProfile()
         httpProfile.endpoint = "nlp.tencentcloudapi.com"
 
